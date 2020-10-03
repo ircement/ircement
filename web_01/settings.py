@@ -44,9 +44,14 @@ TEMPLATES=[
 WSGI_APPLICATION='web_01.wsgi.application'
 DATABASES={
 	'default':{
-		'ENGINE':'django.db.backends.sqlite3',
-		'NAME':BASE_DIR/'db.sqlite3',
-	}
+		'ENGINE':'django.db.backends.postgresql',
+		'NAME':'d2av0e9vbm22ps',
+		'HOST':'ec2-54-156-53-71.compute-1.amazonaws.com',
+		'PORT':5432,
+		'USER':'gshnkzvtnsmwoy',
+		'PASSWORD'
+		'':'1e99d42451b4f7259db2d3ba8b78fef4d5275b0732b00e359253d8118026e371'
+		}
 }
 AUTH_PASSWORD_VALIDATORS=[
 	{
@@ -70,5 +75,5 @@ USE_TZ=True
 STATIC_URL='/static/'
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
-STATIC_ROOT=os.path.join(BASE_DIR,'static')
-#STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)
+#STATIC_ROOT=os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)
