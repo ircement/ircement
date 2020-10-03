@@ -3,7 +3,7 @@ from pathlib import Path
 BASE_DIR=Path(__file__).resolve().parent.parent
 SECRET_KEY='v+9%l@@6upn5j(a#w^sp+$y4-am252o6_!d(8ab4l_!fn!)ah&'
 DEBUG=True
-ALLOWED_HOSTS=['maxgendev.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS=['127.0.0.1','ircement.herokuapp.com']
 INSTALLED_APPS=[
 	'control_panel.apps.ControlPanelConfig',
 	'users.apps.UsersConfig',
@@ -28,7 +28,7 @@ ROOT_URLCONF='web_01.urls'
 TEMPLATES=[
 	{
 		'BACKEND':'django.template.backends.django.DjangoTemplates',
-		'DIRS':[str(BASE_DIR).replace("\\","/")+'/templates/']
+		'DIRS':[os.path.join(BASE_DIR,'templates')]
 		,
 		'APP_DIRS':True,
 		'OPTIONS':{
@@ -69,5 +69,6 @@ USE_L10N=True
 USE_TZ=True
 STATIC_URL='/static/'
 MEDIA_URL='/media/'
-MEDIA_ROOT=str(BASE_DIR).replace("\\","/")+'/media/'
-STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+STATIC_ROOT=os.path.join(BASE_DIR,'static')
+#STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)
