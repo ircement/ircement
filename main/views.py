@@ -153,7 +153,7 @@ def about_us(request):
 					  'cntS':counter_numbers_title_S,
 					  'style':'web_01/css/style'+theme_name+'.css',
 					  'responsive':'web_01/css/responsive'+theme_name+'.css',
-					  'page_name':''
+					  'page_name':'about us'
 					  })
 def contact_us(request):
 	slideshow_array=list()
