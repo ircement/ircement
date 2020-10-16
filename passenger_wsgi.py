@@ -1,0 +1,1 @@
+from web_01.wsgi import application
